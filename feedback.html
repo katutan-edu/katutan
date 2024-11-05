@@ -43,7 +43,7 @@
  </header>     
     <main>
     <div class="contact_container">
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST" class="contact-left">
             <div class="contact-left-title">
                 <h2>Hubungi Kami</h2>
                 <hr>
@@ -72,6 +72,11 @@
           ? "fa-solid fa-xmark"
           : "fa-solid fa-bars";
       };
+
+      // Clear the form when the page loads
+      window.addEventListener('load', function() {
+         document.getElementById('feedbackForm').reset();
+      });
     </script>
 </body>
 </html>
