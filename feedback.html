@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <title>Maklum Belas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="Shodwe-removebg-preview.png" type="image/png" id="logo">
+</head>
+
+<body class="feedback_page">
+  <header class="header">
+    <div class="navbar">
+      <a href="index.html" class="logo"><img src="Shodwe-removebg-preview.png" alt=""></a>
+        <ul class="links">
+        <li><a href="index.html" style="--i:1;" class="active">Halaman Utama</a></li>
+        <li><a href="review.html" style="--i:2;">Nota</a></li>
+        <li><a href="about.html" style="--i:3;">Contoh</a></li>
+        <li><a href="activity.html" style="--i:4;">Aktiviti</a></li>
+      </ul>
+      <a href="feedback.html" style="--i:5;" class="action_btn">Maklum Balas</a>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <ul>
+        <li><a href="index.html" style="--i:1;" class="active">Halaman Utama</a></li>
+        <li><a href="review.html" style="--i:2;">Nota</a></li>
+        <li><a href="about.html" style="--i:3;">Contoh</a></li>
+        <li><a href="activity.html" style="--i:4;">Aktiviti</a></li>
+        <li><a href="feedback.html" style="--i:5;" class="action_btn">Maklum Balas</a></li>
+      </ul>
+    </div>
+ </header>     
+    <main>
+    <div class="contact_container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Hubungi Kami</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="70634af7-2fcc-4dde-bced-914da2b21a8f">
+            <input type="text" name="text" placeholder="Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Emel" class="contact-inputs" required>
+            <textarea name="message" placeholder="Mesej Anda"class="contact-inputs" required></textarea>
+            <button type="submit">Hantar <img src="assets/arrow_icon.png" alt=""></button>
+        </form>
+        <div class="contact-right">
+            <img src="Spongebob_Squarepants-removebg-preview.png" alt="">
+        </div>
+    </div>
+    </main>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.className = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+</body>
+</html>

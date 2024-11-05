@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <title>KATUTAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="Shodwe-removebg-preview.png" type="image/png" id="logo">
+</head>
+
+<body class="home_page">
+    <audio autoplay loop>
+      <source src="Intro_page_music.mp3" type="audio/mp3">
+    </audio>
+    <header class="header">
+      <div class="navbar">
+        <a href="index.html" class="logo"><img src="Shodwe-removebg-preview.png" alt=""></a>
+          <ul class="links">
+          <li><a href="index.html" style="--i:1;" class="active">Halaman Utama</a></li>
+          <li><a href="review.html" style="--i:2;">Nota</a></li>
+          <li><a href="about.html" style="--i:3;">Contoh</a></li>
+          <li><a href="activity.html" style="--i:4;">Aktiviti</a></li>
+        </ul>
+        <a href="feedback.html" style="--i:5;" class="action_btn">Maklum Balas</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+  
+      <div class="dropdown_menu">
+        <ul>
+          <li><a href="index.html" style="--i:1;" class="active">Halaman Utama</a></li>
+          <li><a href="review.html" style="--i:2;">Nota</a></li>
+          <li><a href="about.html" style="--i:3;">Contoh</a></li>
+          <li><a href="activity.html" style="--i:4;">Aktiviti</a></li>
+          <li><a href="feedback.html" style="--i:5;" class="action_btn">Maklum Balas</a></li>
+        </ul>
+      </div>
+   </header>    
+    <section class="home">
+      <div class="home-content">
+          <h1>Kata Tugas</h1>
+          <h3>Kata Tanya</h3>
+          <p>Jom! <br>
+            Marilah kita belajar!</p>
+          <a href="review.html" class="btn1">Mula </a>
+      </div>
+      <div class="home-img">
+          <div class="rhombus">
+              <img src="spongebob-removebg-preview.png" alt="">
+          </div>
+      </div>
+
+      <div class="rhombus2"></div>
+    </section>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.className = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+
+    </script>
+</body>
+</html>
